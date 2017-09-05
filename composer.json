@@ -1,0 +1,14 @@
+{
+    "name": "asayer.io/phpunit",
+    "description": "Asayer-PHPUnit sample",
+"scripts": {
+"test":"vendor/bin/phpunit tests/AsayerVideoTest.php"
+},
+    "require-dev": {
+        "phpunit/phpunit": "6.3.0",
+        "facebook/webdriver": "dev-master"
+    },
+    "autoload": {
+    "psr-4": {"Asayer\\": "lib/"}
+  }
+}
