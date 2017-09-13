@@ -1,12 +1,11 @@
 {  
    "apikey":"ASAYER API KEY",
-   "server":"http://hub.asayer.io/wd/hub",
-   "name":"Testing PHPUnit Asayer.io",
+   "server":"https://hub.asayer.io/wd/hub",
+   "name":"Testing PHPUnit with Asayer",
    "tunnelId":"",
 
 
    "capabilities":{  
- 
          "platform":"LINUX",
          "browserName":"chrome",
          "flags":{  
