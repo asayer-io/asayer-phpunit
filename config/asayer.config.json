@@ -6,7 +6,7 @@
 
 
    "capabilities":{  
-         "platform":"LINUX",
+         "platform":"any",
          "browserName":"chrome",
          "flags":{  
             "--default-background-color":"ff0000ff",
