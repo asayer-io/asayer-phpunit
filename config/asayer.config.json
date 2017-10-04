@@ -1,5 +1,5 @@
 {
-	"apikey2":"ASAYER API KEY",
+	"apikey":"ASAYER API KEY",
     "server": "https://hub.asayer.io/wd/hub",
     "name": "Testing PHPUnit with Asayer",
     "build": "",
