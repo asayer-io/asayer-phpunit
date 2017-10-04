@@ -1,17 +1,12 @@
-{  
-   "apikey":"ASAYER API KEY",
-   "server":"https://hub.asayer.io/wd/hub",
-   "name":"Testing PHPUnit with Asayer",
-   "tunnelId":"",
+{
+	"apikey2":"ASAYER API KEY",
+    "server": "https://hub.asayer.io/wd/hub",
+    "name": "Testing PHPUnit with Asayer",
+    "build": "",
 
-
-   "capabilities":{  
-         "platform":"any",
-         "browserName":"chrome",
-         "flags":{  
-            "--default-background-color":"ff0000ff",
-            "--enable-google-branded-context-menu":"true"
-         }
-      }
-   }
-
+    "tunnelId": "",
+    "capabilities": {   
+        "browserName": "chrome",
+        "platform": "any"
+    }
+}
