@@ -1,12 +1,15 @@
 {
-	"apikey":"ASAYER API KEY",
-    "server": "https://hub.asayer.io/wd/hub",
-    "name": "Testing PHPUnit with Asayer",
-    "build": "",
-
-    "tunnelId": "",
-    "capabilities": {   
-        "browserName": "chrome",
-        "platform": "any"
+  "apikey": "ASAYER API KEY",
+  "server": "https://hub.asayer.io/wd/hub",
+  "name": "Testing PHPUnit with Asayer",
+  "build": "",
+  "tunnelId": "",
+  "capabilities": {
+    "browserName": "chrome",
+    "platform": "any",
+    "flags": {
+      "--incognito": true,
+      "--start-fullscreen": true
     }
+  }
 }

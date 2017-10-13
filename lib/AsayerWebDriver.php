@@ -11,6 +11,7 @@ class AsayerWebDriver extends TestCase
     protected $apikey;
     protected $sessionId;
 
+    //Fixture before the test
     public function setUp()
     {
         $config_file = json_decode(file_get_contents('config/asayer.config.json'), true);
@@ -52,6 +53,7 @@ class AsayerWebDriver extends TestCase
         $this->sessionId = $this->webDriver->getSessionID();
     }
 
+    //Fixture after the test
     public function tearDown()
     {
         $this->webDriver->quit();
@@ -62,14 +64,8 @@ class AsayerWebDriver extends TestCase
         }
     }
 
-    public function mockResult($state)
-    {
-        $this->markSessionDetails($state, "requirementId1230", array("TEST ID 1" => "Passed", "TEST ID 2" => "Failed"));
-    }
-
     public function markSession($state)
-    {$this->mockResult($state);
-        return;
+    {
         if ($this->sessionId != null && strlen($this->sessionId) > 0) {
             $postData = array(
                 'sessionID' => $this->sessionId,
@@ -94,8 +90,6 @@ class AsayerWebDriver extends TestCase
                     'testStatus' => $testStatus
                 );
                 $this->sendResults($postData);
-                echo "\n------------------------------------------------------------\n";
-                echo json_encode($postData);
             } else {
                 echo "Asayer: check the requirementID and the testStatus values.\n";
             }
