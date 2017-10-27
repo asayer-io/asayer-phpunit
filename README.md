@@ -20,6 +20,7 @@
    - [Tunnels](#tunnels)
 * [Application Parameters](#application-parameters)
 * [Capabilities](#capabilities)
+   - [Supported Browser Versions](#supported-browser-versions)
    - [Supported Mobile Devices](#supported-mobile-devices)
    - [Fun with Flags](#fun-with-flags)
 * [Integrating Asayer with your existing project](#integrating-asayer-with-your-existing-project)
@@ -160,19 +161,23 @@ Below is the list of supported capabilities:
 | :-------------: |:-------------| :-----:|:-------------|:-----:|
 | `platform`| `linux` `windows` `mac` `android` `ios` `any`| linux | The platform used for the test | yes |
 | `browserName`|`chrome` `firefox` `ie` `safari` `opera` `edge`| chrome | The browser used for the test | yes |
+|`seleniumVersion`|`2.53.1`, `latest`| `latest`|  The selenium version used for the test | no |
+|`browserVersion`| see the list of [supported browser versions](#supported-browser-versions) | `latest` | The browser version used for the test | no |
 | `flags`|| - |A list of flags to be passed to the browser, see [Fun with Flags](#fun-with-flags) | no |
 | `deviceName`| see the list of [supported mobile devices](#supported-mobile-devices) | - |The android device name to use for the test | yes if `platform` is set to `android` or `ios` |
 
-The supported browser versions are:
+### Supported Browser Versions
 
-| Name        | Version           |
+The list of supported browser versions are:
+
+| Name        | Versions           |
 | :-------------: |:-------------:| 
-| edge | 15 |
-| opera | 48 |
-| firefox | 56 |
-| chrome | 61 |
-| ie | 11 |
-| safari | 11.0 |
+| edge | `15` |
+| opera | `48` |
+| firefox | `47`, `56.0.1` |
+| chrome | `62` |
+| ie | `11` |
+| safari | `11` |
 
 ### Supported Mobile Devices
 
@@ -217,7 +222,7 @@ These flags will be interpreted as `--incognito --start-fullscreen`.
 ## Integrating Asayer with your existing project
 Follow the below steps to integrate Asayer with your existing project:
 * Copy the class [`AsayerWebDriver.php`](https://github.com/asayer-io/asayer-phpunit/blob/master/lib/AsayerWebDriver.php) to your project under the `lib` folder
-* Add the [`asayer.config.json`](https://github.com/asayer-io/asayer-phpunit/blob/master/config/asayer.config.json) file to your project under the `config` folder 
+* Add the [`asayer.config.json`](https://github.com/asayer-io/asayer-phpunit/blob/master/config/asayer.config.json) file to your project under the `config` folder, setup the Application Parameters ([here](#application-parameters)) then configure the desired Capabilities ([here](#capabilities))
 * Have the required [dependencies](#dependencies) installed
 * Edit you test classes to extend the `AsayerWebDriver` class 
 
